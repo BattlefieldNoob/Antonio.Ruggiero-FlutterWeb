@@ -1,7 +1,6 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MyApp());
 
@@ -98,11 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         "Sasha Dog Filter",
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
-                      onPressed: () async {
+                      onPressed: () {
                         debugPrint("cavallo");
-                        if (await canLaunch("http://bit.ly/SashaInstaDog")) {
-                          launch("http://bit.ly/SashaInstaDog");
-                        }
+                        window.location.assign("http://bit.ly/SashaInstaDog");
                       })),
               FractionallySizedBox(
                   widthFactor: 0.5,
@@ -112,11 +109,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         "Thanks Mr Skeltal Filter",
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
-                      onPressed: () async {
+                      onPressed: () {
                         debugPrint("cavallo");
-                        if (await canLaunch("http://bit.ly/ThankMrSkeltal")) {
-                          launch("http://bit.ly/ThankMrSkeltal");
-                        }
+                        window.location.assign("http://bit.ly/ThankMrSkeltal");
                       })),
             ],
           ),
