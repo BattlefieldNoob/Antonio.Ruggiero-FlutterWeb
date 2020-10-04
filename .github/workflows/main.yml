@@ -10,18 +10,10 @@ jobs:
 
     runs-on: ubuntu-latest
     container: 
-      image: "docker.pkg.github.com/battlefieldnoob/flutter-web-docker-imagebuilder/flutter-web:1.22.0"
-      credentials:
-        username: BattlefieldNoob
-        password: ${{ secrets.GH_PAT }}
+      image: "ghcr.io/battlefieldnoob/flutter-web:1.22.0"
 
     steps:
     - uses: actions/checkout@v1
-    - name: "[Temporary] install rsync for deploy stage"
-      run: apt update && apt -y install rsync
-
-    - name: flutter enable web
-      run: flutter config --enable-web
 
     - name: flutter build
       run: flutter build web
