@@ -10,7 +10,10 @@ jobs:
 
     runs-on: ubuntu-latest
     container: 
-      image: "ghcr.io/battlefieldnoob/flutter-web:1.22.0"
+      image: "docker.pkg.github.com/battlefieldnoob/flutter-web-docker-imagebuilder/flutter-web:1.22.0"
+      credentials:
+        username: BattlefieldNoob
+        password: ${{ secrets.GH_PAT }}
 
     steps:
     - uses: actions/checkout@v1
