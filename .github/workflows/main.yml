@@ -10,7 +10,7 @@ jobs:
 
     runs-on: ubuntu-latest
     container: 
-      image: "cirrusci/flutter:beta"
+      image: "docker.pkg.github.com/battlefieldnoob/flutter-web-docker-imagebuilder/flutter-web:1.22.0"
 
     steps:
     - uses: actions/checkout@v1
