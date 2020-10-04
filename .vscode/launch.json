@@ -5,10 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "InstagramFilters Release",
+            "type": "dart",
+            "request": "launch",
+            "args": ["--release", "--web-hostname", "0.0.0.0", "--web-port", "3000"]
+        },
+        {
             "name": "InstagramFilters",
             "type": "dart",
             "request": "launch",
-            "args": ["-d", "chrome", "--web-port", "3000"]
+            "args": ["--web-hostname", "0.0.0.0", "--web-port", "3000"]
         }
 
     ]
