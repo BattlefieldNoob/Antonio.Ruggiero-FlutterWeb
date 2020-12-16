@@ -56,8 +56,18 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    final boxDecoration = BoxDecoration(
+      shape: BoxShape.circle,
+        gradient: LinearGradient(colors: [
+      Color.fromRGBO(253, 143, 103, 255),
+      Color.fromRGBO(212, 99, 163, 255)
+    ], stops: [
+      0.0,
+      0.7
+    ]));
     return Scaffold(
       body: Container(
+        decoration: boxDecoration,
         height: 500,
         child: Center(
           child: Column(
