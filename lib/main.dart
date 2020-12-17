@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -57,76 +58,75 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     final boxDecoration = BoxDecoration(
-      shape: BoxShape.circle,
-        gradient: LinearGradient(colors: [
-      Color.fromRGBO(253, 143, 103, 255),
-      Color.fromRGBO(212, 99, 163, 255)
-    ], stops: [
-      0.0,
-      0.7
-    ]));
+        gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xffd463a3), Color(0xffeb8f67)]));
     return Scaffold(
       body: Container(
-        decoration: boxDecoration,
-        height: 500,
-        child: Center(
-          child: Column(
-            // Column is also a layout widget. It takes a list of children and
-            // arranges them vertically. By default, it sizes itself to fit its
-            // children horizontally, and tries to be as tall as its parent.
-            //
-            // Invoke "debug painting" (press "p" in the console, choose the
-            // "Toggle Debug Paint" action from the Flutter Inspector in Android
-            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-            // to see the wireframe for each widget.
-            //
-            // Column has various properties to control how it sizes itself and
-            // how it positions its children. Here we use mainAxisAlignment to
-            // center the children vertically; the main axis here is the vertical
-            // axis because Columns are vertical (the cross axis would be
-            // horizontal).
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Container(
-                  height: 190,
-                  width: 190,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage("assets/profile.jpg")))),
-              Text(
-                "@antonio.ruggiero93",
-                style: TextStyle(color: Colors.grey, fontSize: 22),
-              ),
-              FractionallySizedBox(
-                  widthFactor: 0.5,
-                  child: RaisedButton(
-                      padding: EdgeInsets.all(16),
-                      child: Text(
-                        "Sasha Dog Filter",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                      onPressed: () {
-                        debugPrint("cavallo");
-                        window.location.assign("http://bit.ly/SashaInstaDog");
-                      })),
-              FractionallySizedBox(
-                  widthFactor: 0.5,
-                  child: RaisedButton(
-                      padding: EdgeInsets.all(16),
-                      child: Text(
-                        "Thanks Mr Skeltal Filter",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                      onPressed: () {
-                        debugPrint("cavallo");
-                        window.location.assign("http://bit.ly/ThankMrSkeltal");
-                      })),
-            ],
-          ),
-        ),
-      ),
+          decoration: boxDecoration,
+          child: Center(
+            child: Column(
+              // Column is also a layout widget. It takes a list of children and
+              // arranges them vertically. By default, it sizes itself to fit its
+              // children horizontally, and tries to be as tall as its parent.
+              //
+              // Invoke "debug painting" (press "p" in the console, choose the
+              // "Toggle Debug Paint" action from the Flutter Inspector in Android
+              // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+              // to see the wireframe for each widget.
+              //
+              // Column has various properties to control how it sizes itself and
+              // how it positions its children. Here we use mainAxisAlignment to
+              // center the children vertically; the main axis here is the vertical
+              // axis because Columns are vertical (the cross axis would be
+              // horizontal).
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                SizedBox.fromSize(size: Size.fromHeight(32)),
+                Container(
+                    height: 190,
+                    width: 190,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage("assets/profile.jpg")))),
+                SizedBox.fromSize(size: Size.fromHeight(32)),
+                Text(
+                  "@antonio.ruggiero93",
+                  style: TextStyle(color: Colors.black54, fontSize: 22),
+                ),
+                SizedBox.fromSize(size: Size.fromHeight(32)),
+                FractionallySizedBox(
+                    widthFactor: 0.5,
+                    child: RaisedButton(
+                        padding: EdgeInsets.all(16),
+                        child: Text(
+                          "Sasha Dog Filter",
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        onPressed: () {
+                          debugPrint("cavallo");
+                          window.location.assign("http://bit.ly/SashaInstaDog");
+                        })),
+                SizedBox.fromSize(size: Size.fromHeight(32)),
+                FractionallySizedBox(
+                    widthFactor: 0.5,
+                    child: RaisedButton(
+                        padding: EdgeInsets.all(16),
+                        child: Text(
+                          "Thanks Mr Skeltal Filter",
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        onPressed: () {
+                          debugPrint("cavallo");
+                          window.location
+                              .assign("http://bit.ly/ThankMrSkeltal");
+                        })),
+              ],
+            ),
+          )),
     );
   }
 }
