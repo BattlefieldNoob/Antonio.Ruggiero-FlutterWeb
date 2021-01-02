@@ -1,4 +1,5 @@
 import 'package:AntonioRuggiero/custom_icons_icons.dart';
+import 'package:AntonioRuggiero/views/github_view.dart';
 import 'package:AntonioRuggiero/views/instagram_view.dart';
 import 'package:AntonioRuggiero/views/personal_info_view.dart';
 import 'package:adaptive_navigation/adaptive_navigation.dart';
@@ -19,9 +20,10 @@ class HomePageState extends State<HomePage> {
     AdaptiveScaffoldDestination(title: 'About Me', icon: Icons.person),
     AdaptiveScaffoldDestination(
         title: 'Instagram', icon: CustomIcons.instagram),
+    AdaptiveScaffoldDestination(title: 'Github', icon: CustomIcons.github)
   ];
 
-  final pages = [PersonalInfoView(), InstagramView()];
+  final pages = [PersonalInfoView(), InstagramView(), GitHubView()];
 
   int selected = 0;
 
@@ -35,10 +37,26 @@ class HomePageState extends State<HomePage> {
           IconTheme(
               data: Theme.of(context).iconTheme,
               child: IconButton(
+                  icon: Icon(
+                    CustomIcons.coffee_1,
+                    semanticLabel: "Buy me a coffee",
+                  ),
+                  onPressed: () {
+                    launch("https://www.paypal.me/Ruggiero26/0.50");
+                  })),
+          const SizedBox(
+            width: 16,
+          ),
+          IconTheme(
+              data: Theme.of(context).iconTheme,
+              child: IconButton(
                   icon: Icon(CustomIcons.day_and_night),
                   onPressed: () {
                     AdaptiveTheme.of(context).toggleThemeMode();
                   })),
+          const SizedBox(
+            width: 16,
+          ),
           InkWell(
             child: Image.asset("assets/github-corner-right.png"),
             onTap: () => launch(

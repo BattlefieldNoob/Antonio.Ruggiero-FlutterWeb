@@ -21,6 +21,7 @@ dependencies:
   adaptive_navigation: ^0.0.3
   adaptive_theme: ^1.1.0
   url_launcher: ^5.7.10
+  github: ^7.0.4
 
 dev_dependencies:
   flutter_test:

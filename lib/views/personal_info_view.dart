@@ -36,6 +36,7 @@ class PersonalInfoView extends StatelessWidget {
             ]),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   "Contacts",
@@ -45,7 +46,10 @@ class PersonalInfoView extends StatelessWidget {
                   height: 8,
                 ),
                 ListTile(
-                  leading: Icon(Icons.email),
+                  leading: Icon(
+                    Icons.email,
+                    size: 16,
+                  ),
                   title: Text("Email"),
                   onTap: () => launch("mailto:ant.ruggiero16@gmail.com"),
                 ),
@@ -53,7 +57,10 @@ class PersonalInfoView extends StatelessWidget {
                   height: 4,
                 ),
                 ListTile(
-                  leading: Icon(CustomIcons.instagram),
+                  leading: Icon(
+                    CustomIcons.instagram,
+                    size: 16,
+                  ),
                   title: Text("Instagram Profile"),
                   onTap: () =>
                       launch("https://www.instagram.com/antonio.ruggiero93/"),
@@ -62,7 +69,10 @@ class PersonalInfoView extends StatelessWidget {
                   height: 4,
                 ),
                 ListTile(
-                  leading: Icon(CustomIcons.github),
+                  leading: Icon(
+                    CustomIcons.github,
+                    size: 16,
+                  ),
                   title: Text("Github Profile"),
                   onTap: () => launch("https://github.com/BattlefieldNoob"),
                 ),
