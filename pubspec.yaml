@@ -18,7 +18,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
+  adaptive_navigation: ^0.0.3
+  adaptive_theme: ^1.1.0
+  url_launcher: ^5.7.10
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -38,6 +41,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - assets/profile.jpg
+  - assets/github-corner-right.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -45,6 +49,11 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
+
+  fonts:
+    - family: CustomIcons
+      fonts:
+        - asset: fonts/CustomIcons.ttf
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
