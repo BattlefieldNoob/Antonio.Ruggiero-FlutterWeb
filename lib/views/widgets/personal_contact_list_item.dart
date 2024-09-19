@@ -15,7 +15,7 @@ class PersonalContactListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.all(4),
+        padding: const EdgeInsets.all(4),
         child: TextButton.icon(
           icon: Icon(
             icon,

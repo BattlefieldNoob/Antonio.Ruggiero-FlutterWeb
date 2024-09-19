@@ -1,14 +1,16 @@
 
-import 'package:AntonioRuggiero/custom_icons_icons.dart';
-import 'package:AntonioRuggiero/views/widgets/PersonalContactListItem.dart';
+import 'package:antonio_ruggiero_website/custom_icons_icons.dart';
+import 'package:antonio_ruggiero_website/views/widgets/personal_contact_list_item.dart';
 import 'package:flutter/material.dart';
 
 class PersonalInfoView extends StatelessWidget {
+  const PersonalInfoView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(32),
-      child: Center(
+      padding: const EdgeInsets.all(32),
+      child: const Center(
         child: Stack(
           children: <Widget>[
             Align(
@@ -18,14 +20,14 @@ class PersonalInfoView extends StatelessWidget {
                     "Antonio Ruggiero",
                     style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 16,
                   ),
                   Text(
                     "Hello! I'm Antonio Ruggiero, i came from Italy and actually i'm a XR developer @ Uqido, Padova",
                     style: TextStyle(fontSize: 18),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 12,
                   ),
                   Text(

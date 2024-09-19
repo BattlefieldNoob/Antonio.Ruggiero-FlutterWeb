@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class RepoCard extends StatelessWidget {
-  static const Color disabledColor = const Color.fromRGBO(48, 46, 50, 1.0);
+  static const Color disabledColor = Color.fromRGBO(48, 46, 50, 1.0);
 
   final String name;
   final String? details;
@@ -26,7 +26,7 @@ class RepoCard extends StatelessWidget {
               subtitle: details != null ? Text(details!) : null,
               trailing: InkWell(
                   onTap: () => launch(url),
-                  child: Padding(
+                  child: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: Icon(
                         Icons.open_in_new,

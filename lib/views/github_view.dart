@@ -1,23 +1,25 @@
-import 'package:AntonioRuggiero/views/repo_card.dart';
+import 'package:antonio_ruggiero_website/views/repo_card.dart';
 import 'package:flutter/material.dart';
 import 'package:github/github.dart';
 
 class GitHubView extends StatelessWidget {
   final githubClient = GitHub();
 
+  GitHubView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: FutureBuilder(
             future: getMyRepos(),
-            initialData: <Repository>[],
+            initialData: const <Repository>[],
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 final data = snapshot.data!;
                 return GridView.builder(
                   itemCount: data.length,
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent: 500, childAspectRatio: 5),
                   itemBuilder: (context, index) {
                     Repository current = data[index];
@@ -31,7 +33,7 @@ class GitHubView extends StatelessWidget {
                   },
                 );
               } else {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               }

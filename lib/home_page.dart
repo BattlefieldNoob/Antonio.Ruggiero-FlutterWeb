@@ -1,14 +1,14 @@
-import 'package:AntonioRuggiero/custom_icons_icons.dart';
-import 'package:AntonioRuggiero/views/github_view.dart';
-import 'package:AntonioRuggiero/views/instagram_view.dart';
-import 'package:AntonioRuggiero/views/personal_info_view.dart';
+import 'package:antonio_ruggiero_website/custom_icons_icons.dart';
+import 'package:antonio_ruggiero_website/views/github_view.dart';
+import 'package:antonio_ruggiero_website/views/instagram_view.dart';
+import 'package:antonio_ruggiero_website/views/personal_info_view.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_adaptive_scaffold/flutter_adaptive_scaffold.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage();
+  const HomePage({super.key});
 
   @override
   State<StatefulWidget> createState() => HomePageState();
@@ -16,20 +16,20 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   final List<NavigationDestination> _allDestinations = <NavigationDestination>[
-    NavigationDestination(label: 'About Me', icon: Icon(Icons.person)),
-    NavigationDestination(
+    const NavigationDestination(label: 'About Me', icon: Icon(Icons.person)),
+    const NavigationDestination(
         label: 'Instagram', icon: Icon(CustomIcons.instagram)),
-    NavigationDestination(label: 'Github', icon: Icon(CustomIcons.github))
+    const NavigationDestination(label: 'Github', icon: Icon(CustomIcons.github))
   ];
 
-  final pages = [PersonalInfoView(), InstagramView(), GitHubView()];
+  final pages = [const PersonalInfoView(), const InstagramView(), GitHubView()];
 
   int selected = 0;
 
   @override
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
-      transitionDuration: Duration(milliseconds: 300),
+      transitionDuration: const Duration(milliseconds: 300),
       leadingExtendedNavRail: _getHeader(),
       useDrawer: false,
       appBar: _buildAppBar(context),
@@ -46,12 +46,12 @@ class HomePageState extends State<HomePage> {
 
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return AppBar(
-      title: Text('Antonio Ruggiero'),
+      title: const Text('Antonio Ruggiero'),
       actions: [
         IconTheme(
             data: Theme.of(context).iconTheme,
             child: IconButton(
-                icon: Icon(
+                icon: const Icon(
                   CustomIcons.coffee_1,
                   semanticLabel: "Buy me a coffee",
                 ),
@@ -64,7 +64,7 @@ class HomePageState extends State<HomePage> {
         IconTheme(
             data: Theme.of(context).iconTheme,
             child: IconButton(
-                icon: Icon(CustomIcons.day_and_night),
+                icon: const Icon(CustomIcons.dayAndNight),
                 onPressed: () {
                   AdaptiveTheme.of(context).toggleThemeMode();
                 })),
@@ -91,22 +91,22 @@ class HomePageState extends State<HomePage> {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-          SizedBox.fromSize(size: Size.fromHeight(16)),
+          SizedBox.fromSize(size: const Size.fromHeight(16)),
           Container(
               height: 128,
               width: 128,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       fit: BoxFit.fill,
                       image: AssetImage("assets/profile.jpg")))),
-          SizedBox.fromSize(size: Size.fromHeight(16)),
-          Text(
+          SizedBox.fromSize(size: const Size.fromHeight(16)),
+          const Text(
             "Hi, I'm Antonio",
             style: TextStyle(fontSize: 22),
           ),
-          Text("XR Programmer @ Uqido"),
-          SizedBox.fromSize(size: Size.fromHeight(16)),
+          const Text("XR Programmer @ Uqido"),
+          SizedBox.fromSize(size: const Size.fromHeight(16)),
         ]));
   }
 }
