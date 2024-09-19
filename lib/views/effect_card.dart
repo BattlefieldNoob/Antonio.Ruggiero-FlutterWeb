@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EffectCard extends StatelessWidget {
@@ -9,7 +6,7 @@ class EffectCard extends StatelessWidget {
 
   final Widget icon;
   final String name;
-  final String details;
+  final String? details;
   final String url;
 
   const EffectCard(
@@ -29,7 +26,7 @@ class EffectCard extends StatelessWidget {
           onTap: () => launch(url),
           leading: icon,
           title: Text(name),
-          subtitle: details != null ? Text(details) : null,
+          subtitle: details != null ? Text(details!) : null,
           trailing: InkWell(
               onTap: () => launch(url),
               child: Padding(

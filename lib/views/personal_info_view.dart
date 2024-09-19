@@ -1,9 +1,7 @@
-import 'dart:html';
 
 import 'package:AntonioRuggiero/custom_icons_icons.dart';
 import 'package:AntonioRuggiero/views/widgets/PersonalContactListItem.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class PersonalInfoView extends StatelessWidget {
   @override

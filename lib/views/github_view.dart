@@ -1,6 +1,5 @@
 import 'package:AntonioRuggiero/views/repo_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:github/github.dart';
 
 class GitHubView extends StatelessWidget {
@@ -15,12 +14,13 @@ class GitHubView extends StatelessWidget {
             initialData: <Repository>[],
             builder: (context, snapshot) {
               if (snapshot.hasData) {
+                final data = snapshot.data!;
                 return GridView.builder(
-                  itemCount: snapshot.data.length,
+                  itemCount: data.length,
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent: 500, childAspectRatio: 5),
                   itemBuilder: (context, index) {
-                    Repository current = snapshot.data[index];
+                    Repository current = data[index];
                     var details =
                         "${current.stargazersCount} stars, ${current.forksCount} forks";
                     return RepoCard(
