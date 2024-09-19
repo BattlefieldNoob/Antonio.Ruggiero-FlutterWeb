@@ -21,11 +21,11 @@ class RepoCard extends StatelessWidget {
       elevation: 3,
       child: Center(
           child: ListTile(
-              onTap: () => launch(url),
+              onTap: () => launchUrl(Uri.parse(url)),
               title: Text(name),
               subtitle: details != null ? Text(details!) : null,
               trailing: InkWell(
-                  onTap: () => launch(url),
+                  onTap: () => launchUrl(Uri.parse(url)),
                   child: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: Icon(

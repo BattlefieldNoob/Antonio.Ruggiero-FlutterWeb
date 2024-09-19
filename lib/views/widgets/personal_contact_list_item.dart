@@ -22,7 +22,7 @@ class PersonalContactListItem extends StatelessWidget {
             size: 16,
           ),
           label: Text(label),
-          onPressed: () => launch(url),
+          onPressed: () => launchUrl(Uri.parse(url)),
         ));
   }
 }

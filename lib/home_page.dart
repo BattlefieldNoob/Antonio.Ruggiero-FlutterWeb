@@ -56,7 +56,7 @@ class HomePageState extends State<HomePage> {
                   semanticLabel: "Buy me a coffee",
                 ),
                 onPressed: () {
-                  launch("https://www.paypal.me/Ruggiero26/0.50");
+                  launchUrl(Uri.parse("https://www.paypal.me/Ruggiero26/0.50"));
                 })),
         const SizedBox(
           width: 16,
@@ -73,8 +73,8 @@ class HomePageState extends State<HomePage> {
         ),
         InkWell(
           child: Image.asset("assets/github-corner-right.png"),
-          onTap: () => launch(
-              "https://github.com/BattlefieldNoob/Antonio.Ruggiero-FlutterWeb"),
+          onTap: () => launchUrl(Uri.parse(
+              "https://github.com/BattlefieldNoob/Antonio.Ruggiero-FlutterWeb")),
         )
       ],
     );

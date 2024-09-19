@@ -23,12 +23,12 @@ class EffectCard extends StatelessWidget {
       elevation: 3,
       child: ListTile(
           contentPadding: const EdgeInsets.all(18),
-          onTap: () => launch(url),
+          onTap: () => launchUrl(Uri.parse(url)),
           leading: icon,
           title: Text(name),
           subtitle: details != null ? Text(details!) : null,
           trailing: InkWell(
-              onTap: () => launch(url),
+              onTap: () => launchUrl(Uri.parse(url)),
               child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8),
                   child: Icon(
