@@ -43,6 +43,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-web
+          path: build/web
 
       - uses: actions/setup-node@v4
 
