@@ -20,11 +20,10 @@ jobs:
         with:
           channel: stable
           cache: true
-          flutter-version-file: pubspec.yaml # path to pubspec.yaml
+          flutter-version-file: pubspec.yaml
 
       - name: Set up Flutter
         run: |
-          flutter doctor
           flutter pub get
 
       - name: Build Flutter Web
