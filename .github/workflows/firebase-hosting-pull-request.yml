@@ -24,6 +24,7 @@ jobs:
 
       - name: Set up Flutter
         run: |
+          flutter pub cache repair
           flutter pub get
 
       - name: Build Flutter Web
