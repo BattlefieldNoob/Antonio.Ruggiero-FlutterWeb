@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global --add safe.directory $HOME/flutter-sdk
           flutter doctor
-          flutter pub get --enforce-lockfile
+          flutter pub get
 
       - name: Build Flutter Web
         run: flutter build web
