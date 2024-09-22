@@ -29,14 +29,16 @@ jobs:
         run: |
           git config --global --add safe.directory $HOME/flutter-sdk
           flutter doctor
+          flutter pub get --enforce-lockfile
 
       - name: Build Flutter Web
         run: flutter build web
 
-      - name: save build artifacts
+      - name: Save build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build/web
+          path: build/web
 
   deploy:
     runs-on: ubuntu-latest
