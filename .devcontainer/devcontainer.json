@@ -1,6 +1,12 @@
 {
-    "image": "ghcr.io/cirruslabs/flutter:stable",
+    "image": "fischerscode/flutter:stable",
     "forwardPorts": [3000],
     "postCreateCommand": "flutter doctor && flutter pub get",
-    "extensions": ["dart-code.flutter"]
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dart-code.flutter"
+            ]
+        }
+    }
 }
