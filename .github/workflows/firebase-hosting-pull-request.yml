@@ -10,8 +10,6 @@ name: Deploy to Firebase Hosting on merge
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      HOME: /home/flutter
     steps:
       - uses: actions/checkout@v4
 
@@ -24,7 +22,6 @@ jobs:
 
       - name: Set up Flutter
         run: |
-          flutter pub cache repair
           flutter pub get
 
       - name: Build Flutter Web
