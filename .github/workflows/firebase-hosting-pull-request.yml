@@ -12,11 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: "fischerscode/flutter-sudo:stable"
+      options: --user root
     steps:
-      - uses: actions/checkout@v4
-        with:
-          clean: false
-          set-safe-directory: false
+      - uses: actions/checkout@vv3.0.2
 
       - name: Cache Flutter packages
         uses: actions/cache@v4
