@@ -17,24 +17,25 @@
 ///         License:   SIL (https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)
 ///         Homepage:  http://fortawesome.github.com/Font-Awesome/
 ///
+library;
 import 'package:flutter/widgets.dart';
 
 class CustomIcons {
   CustomIcons._();
 
   static const _kFontFam = 'CustomIcons';
-  static const String _kFontPkg = null;
+  static const String? _kFontPkg = null;
 
   static const IconData coffee =
       IconData(0xf0f4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData coffee_1 =
       IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 
-  static const IconData day_and_night =
+  static const IconData dayAndNight =
       IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData unity =
       IconData(0xe820, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData instagram_square =
+  static const IconData instagramSquare =
       IconData(0xe822, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData github =
       IconData(0xf09b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
